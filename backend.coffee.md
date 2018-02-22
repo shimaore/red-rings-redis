@@ -4,11 +4,11 @@ Redis backend compatible with abrasive-ducks
     redis_backend = (options) ->
       redis = new Redis options
 
-      (clients_sources) ->
+      (sources) ->
 
 Messages from the bus to the client are sent on the subscription channels.
 
-        clients_sources
+        sources
         .continueWith ->
           redis.disconnect()
           most.empty()
