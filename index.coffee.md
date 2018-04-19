@@ -1,6 +1,8 @@
 Client for a Redis red-ring (typically used on a backend application)
 ---------------------------
 
+    {RedRing} = require 'red-rings'
+
     class RedRingRedis extends RedRing
 
       constructor: (options) ->
@@ -31,7 +33,5 @@ Messages from the bus to the client are sent on the subscription channel.
         @redis.unsubscribe key
         super key
 
-    Redis = require 'ioredis'
-    {RedRing} = require 'red-rings'
-
     module.exports = RedRingRedis
+    Redis = require 'ioredis'

@@ -23,3 +23,4 @@ Messages from the clients to the bus are received on the `msg` channel.
         .map ([_,msg]) -> msg
 
     module.exports = redis_backend
+    Redis = require 'ioredis'
